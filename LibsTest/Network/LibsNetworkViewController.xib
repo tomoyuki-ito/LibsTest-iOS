@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LibsNetworkViewController" customModule="LibsTest" customModuleProvider="target">
+            <connections>
+                <outlet property="requestButton" destination="g3N-73-KPL" id="P7k-X6-TLz"/>
+                <outlet property="stateLabel" destination="4V9-pn-3Rb" id="E2S-hL-UAG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Az5-KC-GK7">
+                    <rect key="frame" x="159" y="293" width="57" height="101"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4V9-pn-3Rb">
+                            <rect key="frame" x="0.0" y="0.0" width="57" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3N-73-KPL">
+                            <rect key="frame" x="0.0" y="71" width="57" height="30"/>
+                            <state key="normal" title="Request"/>
+                            <connections>
+                                <action selector="requestButtonTouched" destination="-1" eventType="touchUpInside" id="1ru-UV-Oz8"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="4V9-pn-3Rb" secondAttribute="trailing" id="07Y-AB-cAk"/>
+                        <constraint firstAttribute="bottom" secondItem="g3N-73-KPL" secondAttribute="bottom" id="4ZY-vw-EMa"/>
+                        <constraint firstItem="g3N-73-KPL" firstAttribute="leading" secondItem="Az5-KC-GK7" secondAttribute="leading" id="Ewz-dx-xP4"/>
+                        <constraint firstAttribute="trailing" secondItem="g3N-73-KPL" secondAttribute="trailing" id="YmW-Dp-kEM"/>
+                        <constraint firstItem="4V9-pn-3Rb" firstAttribute="centerX" secondItem="Az5-KC-GK7" secondAttribute="centerX" id="dfm-BZ-bh7"/>
+                        <constraint firstItem="4V9-pn-3Rb" firstAttribute="leading" secondItem="Az5-KC-GK7" secondAttribute="leading" id="gmc-3F-OQT"/>
+                        <constraint firstItem="4V9-pn-3Rb" firstAttribute="top" secondItem="Az5-KC-GK7" secondAttribute="top" id="j1T-WG-xIK"/>
+                        <constraint firstItem="g3N-73-KPL" firstAttribute="top" secondItem="4V9-pn-3Rb" secondAttribute="bottom" constant="50" id="oP6-FV-W8p"/>
+                        <constraint firstItem="g3N-73-KPL" firstAttribute="centerX" secondItem="Az5-KC-GK7" secondAttribute="centerX" id="tx5-lz-g3T"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Az5-KC-GK7" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="93D-b0-xe1"/>
+                <constraint firstItem="Az5-KC-GK7" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="jje-wq-HX2"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>
