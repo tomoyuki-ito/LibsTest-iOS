@@ -33,6 +33,13 @@ class LibsNetworkViewController: UIViewController {
             switch result {
             case .success(let user):
                 print(user)
+//                let realmUser = RealmUser()
+//                realmUser.id = user.id
+//                realmUser.name = user.name
+//                realmUser.age = user.age
+//                realmUser.save()
+                user.save()
+                print(RealmUser.allObjects())
             case .failure(let error):
                 print(error)
             }
@@ -43,17 +50,21 @@ class LibsNetworkViewController: UIViewController {
 
 struct UserRequest: Request {
     
-    typealias Response = User
-    
+//    typealias Response = User
+//    typealias Response = HimotokiUser
+    typealias Response = RealmUser
+
     let baseURL: URL = URL(string: "http://localhost:3000")!
     var method: HTTPMethod = .get
     var path: String = "/user"
 
     func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Response {
-        guard let dict = object as? [String: Any], let user = User(dict: dict) else {
-            throw NSError(domain: "Error", code: 0, userInfo: nil)
-        }
-        return user
+//        guard let dict = object as? [String: Any], let user = User(dict: dict) else {
+//            throw NSError(domain: "Error", code: 0, userInfo: nil)
+//        }
+//        return user
+//        return try HimotokiUser.decodeValue(object)
+        return try RealmUser.decodeValue(object)
     }
     
 }

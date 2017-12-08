@@ -7,5 +7,8 @@ target 'LibsTest' do
 
   # Pods for LibsTest
   pod 'APIKit', '~> 3.1'
+  pod 'Himotoki', '~> 3.1'
+  pod 'RealmSwift', '~> 3.0'
+  pod 'BrightFutures', '~> 6.0'
 
 end

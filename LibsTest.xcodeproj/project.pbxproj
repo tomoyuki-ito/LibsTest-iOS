@@ -19,6 +19,10 @@
 		8E664C021FC1D23B000B44CC /* LibsNetworkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E664C001FC1D23B000B44CC /* LibsNetworkViewController.xib */; };
 		8E664C041FC1DE42000B44CC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E664C031FC1DE42000B44CC /* User.swift */; };
 		9208F5B5B94F8CCF87C4AE92 /* Pods_LibsTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 893F78E43938A91E7004ECFD /* Pods_LibsTest.framework */; };
+		DCB939021FC2B16D00533650 /* NormalAsyncViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB939001FC2B16D00533650 /* NormalAsyncViewController.swift */; };
+		DCB939031FC2B16D00533650 /* NormalAsyncViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCB939011FC2B16D00533650 /* NormalAsyncViewController.xib */; };
+		DCB939061FC2B18500533650 /* LibsAsyncViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB939041FC2B18500533650 /* LibsAsyncViewController.swift */; };
+		DCB939071FC2B18500533650 /* LibsAsyncViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCB939051FC2B18500533650 /* LibsAsyncViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		8E664BFF1FC1D23B000B44CC /* LibsNetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibsNetworkViewController.swift; sourceTree = "<group>"; };
 		8E664C001FC1D23B000B44CC /* LibsNetworkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibsNetworkViewController.xib; sourceTree = "<group>"; };
 		8E664C031FC1DE42000B44CC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DCB939001FC2B16D00533650 /* NormalAsyncViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalAsyncViewController.swift; sourceTree = "<group>"; };
+		DCB939011FC2B16D00533650 /* NormalAsyncViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NormalAsyncViewController.xib; sourceTree = "<group>"; };
+		DCB939041FC2B18500533650 /* LibsAsyncViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibsAsyncViewController.swift; sourceTree = "<group>"; };
+		DCB939051FC2B18500533650 /* LibsAsyncViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibsAsyncViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				8E664BFA1FBFEE4D000B44CC /* Network */,
+				DCB938FE1FC26B7900533650 /* Decode */,
+				DCB938FF1FC2B13A00533650 /* Async */,
 				8E664BE61FBFED9B000B44CC /* AppDelegate.swift */,
 				8E664BE81FBFED9B000B44CC /* MasterViewController.swift */,
 				8E664BEA1FBFED9C000B44CC /* DetailViewController.swift */,
@@ -103,6 +113,24 @@
 				893F78E43938A91E7004ECFD /* Pods_LibsTest.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DCB938FE1FC26B7900533650 /* Decode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Decode;
+			sourceTree = "<group>";
+		};
+		DCB938FF1FC2B13A00533650 /* Async */ = {
+			isa = PBXGroup;
+			children = (
+				DCB939001FC2B16D00533650 /* NormalAsyncViewController.swift */,
+				DCB939011FC2B16D00533650 /* NormalAsyncViewController.xib */,
+				DCB939041FC2B18500533650 /* LibsAsyncViewController.swift */,
+				DCB939051FC2B18500533650 /* LibsAsyncViewController.xib */,
+			);
+			path = Async;
 			sourceTree = "<group>";
 		};
 		E6034A3DD2A91F0C9D048FBA /* Pods */ = {
@@ -177,7 +205,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E664BF31FBFED9C000B44CC /* LaunchScreen.storyboard in Resources */,
+				DCB939071FC2B18500533650 /* LibsAsyncViewController.xib in Resources */,
 				8E664C021FC1D23B000B44CC /* LibsNetworkViewController.xib in Resources */,
+				DCB939031FC2B16D00533650 /* NormalAsyncViewController.xib in Resources */,
 				8E664BF01FBFED9C000B44CC /* Assets.xcassets in Resources */,
 				8E664BFE1FBFF01C000B44CC /* NormalNetworkViewController.xib in Resources */,
 				8E664BEE1FBFED9C000B44CC /* Main.storyboard in Resources */,
@@ -213,11 +243,19 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LibsTest/Pods-LibsTest-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/APIKit/APIKit.framework",
+				"${BUILT_PRODUCTS_DIR}/BrightFutures/BrightFutures.framework",
+				"${BUILT_PRODUCTS_DIR}/Himotoki/Himotoki.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/APIKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BrightFutures.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Himotoki.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,8 +289,10 @@
 				8E664BEB1FBFED9C000B44CC /* DetailViewController.swift in Sources */,
 				8E664C041FC1DE42000B44CC /* User.swift in Sources */,
 				8E664BE91FBFED9B000B44CC /* MasterViewController.swift in Sources */,
+				DCB939021FC2B16D00533650 /* NormalAsyncViewController.swift in Sources */,
 				8E664BFD1FBFF01C000B44CC /* NormalNetworkViewController.swift in Sources */,
 				8E664BE71FBFED9B000B44CC /* AppDelegate.swift in Sources */,
+				DCB939061FC2B18500533650 /* LibsAsyncViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
