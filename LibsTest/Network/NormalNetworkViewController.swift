@@ -25,11 +25,12 @@ class NormalNetworkViewController: UIViewController {
     }
 
     @IBAction func requestButtonTouched() {
-        let task = URLSession.shared.dataTask(with: URL(string: "http://localhost:3000/user")!) { (data, response, error) in
+        let url = URL(string: "http://localhost:3000/user")!
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let data = data {
                 do {
-                    guard let dict = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any],
-                        let user = User(dict: dict) else {
+                    let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+                    guard let dict = json  as? [String: Any], let user = User(dict: dict) else {
                             print("Serialize Error")
                             return
                     }
